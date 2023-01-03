@@ -3,13 +3,30 @@
     <head>
         <title>Exercice_4</title>
         <meta charset="UTF-8" />
-    </head>
+    </head>      
+
     <body>
-        <form>
-            <label for="lastname">Nom : </label><input type="text" name="lastname" id="lastname"/>
-            <label for="firstname">Prénom : </label><input type="text" name="firstname" id="firstname"/>
-            <label for="city">Ville : </label><input type="text" name="city" id="city"/>
-            <button  name="submit" id="submit">Valider</button>
+        <form onSubmit="test()">
+            <label for="lastname">Nom : </label><input type="text" name="lastname" id="lastname" />
+            <label for="firstname">Prénom : </label><input type="text" name="firstname" id="firstname" />
+            <label for="city">Ville : </label><input type="text" name="city" id="city" />
+            <button name="submit" id="submit">Valider</button>
         </form>
+
+        <script src="./exos.js"></script>
+
+        <!-- <script>
+            let responses = location.search.substring(1).split("&")
+            let lastname = responses[0].substring((responses[0].indexOf("=")+1),responses[0].length)
+            let firstname = responses[1].substring((responses[1].indexOf("=")+1),responses[1].length)
+            let city = responses[2].substring((responses[2].indexOf("=")+1),responses[2].length)
+            if (lastname!="" && firstname!="" && city!=""){
+                alert(`
+                    Nom : ${lastname}
+                    Prénom : ${firstname}
+                    Ville : ${city}
+                    `)
+            }
+        </script> -->
     </body>
 </html>
